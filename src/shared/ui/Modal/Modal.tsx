@@ -1,5 +1,3 @@
-// Modal.tsx
-
 import type { ReactNode } from "react";
 import React, { useCallback, useEffect, useRef, useState } from "react";
 import Portal from "../Portal/Portal";
@@ -86,19 +84,17 @@ export const Modal = (props: ModalProps) => {
           ${className || ""}
         `}
 			>
-				{/* Overlay */}
 				<div
-					className="absolute inset-0 bg-black/60"
+					className="absolute inset-0 bg-gray-500/75"
 					onClick={closeHandler}
 				/>
-
-				{/* Content wrapper with scroll */}
 				<div
 					className={`
             relative z-[10] 
-            max-w-[60%] max-h-[90vh] overflow-y-auto
-            p-5 rounded-lg
+            max-w-[54%] max-h-[90vh] overflow-y-auto
+            rounded-lg
             bg-white
+            p-6
             transform transition-transform duration-300 ease-out
             ${isClosing ? "scale-[0.2]" : "scale-100"}
           `}

@@ -29,26 +29,28 @@ const AddCommentForm = memo((props: AddCommentFormProps) => {
 
 	return (
 		<div className={`flex flex-col gap-2`}>
-			<div className="flex items-center gap-2">
-				<input
-					type="text"
-					placeholder="Введите текст комменатария"
+			<div className="flex flex-col items-start gap-2 mb-6">
+				<p className="text-gray-700 font-medium text-sm/5">Comment</p>
+				<textarea
 					value={text}
 					onChange={(e) => setText(e.target.value)}
 					onKeyDown={handleKeyDown}
-					className="flex-1 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+					className="w-full flex-1 px-4 py-2 min-h-30 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
 					disabled={isLoading}
 				/>
-				<button
-					onClick={handleSubmit}
-					disabled={isLoading || !text.trim()}
-					className={`px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors ${
-						isLoading ? "opacity-50 cursor-not-allowed" : ""
-					}`}
-				>
-					{isLoading ? <p>Отправка...</p> : <p>Отправить</p>}
-				</button>
+				<p className="text-gray-500 text-sm/5">
+					Write a few sentences about the photo
+				</p>
 			</div>
+			<button
+				onClick={handleSubmit}
+				disabled={isLoading || !text.trim()}
+				className={`px-4 py-2 bg-indigo-600 rounded-md text-white text-sm/5 ${
+					isLoading ? "opacity-50 cursor-not-allowed" : ""
+				}`}
+			>
+				{isLoading ? "Отправка..." : "Отправить"}
+			</button>
 
 			{error && (
 				<div className="text-red-500 text-sm">

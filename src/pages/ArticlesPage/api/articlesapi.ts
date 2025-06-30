@@ -17,7 +17,7 @@ export const articlesApi = rtkApi.injectEndpoints({
 				method: "POST",
 				body: { comment },
 			}),
-			invalidatesTags: ["Articles"],
+			invalidatesTags: ["ArticleDetails"],
 		}),
 	}),
 });

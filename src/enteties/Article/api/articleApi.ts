@@ -5,7 +5,7 @@ export const articleApi = rtkApi.injectEndpoints({
 	endpoints: (build) => ({
 		getArticleDetails: build.query<ArticleDetailsData, number>({
 			query: (id) => `/image/${id}`,
-			providesTags: ["Articles"],
+			providesTags: ["ArticleDetails"],
 		}),
 	}),
 });

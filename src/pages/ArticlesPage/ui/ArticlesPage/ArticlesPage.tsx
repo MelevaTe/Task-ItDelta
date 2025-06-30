@@ -3,7 +3,7 @@ import { ArticleInfiniteList } from "../../ui/ArticleInfiniteList/ArticleInfinit
 
 const ArticlesPage = () => {
 	return (
-		<div>
+		<div className="mt-50">
 			<ArticleInfiniteList />
 		</div>
 	);

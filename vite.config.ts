@@ -5,5 +5,5 @@ import svgr from "vite-plugin-svgr";
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
-	plugins: [tailwindcss(), svgr(), react(), tsconfigPaths()],
+	plugins: [svgr(), tailwindcss(), react(), tsconfigPaths()],
 });

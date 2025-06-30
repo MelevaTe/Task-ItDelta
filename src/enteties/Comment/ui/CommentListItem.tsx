@@ -7,9 +7,10 @@ interface CommentListItemProps {
 
 export const CommentListItem = memo(({ comment }: CommentListItemProps) => {
 	return (
-		<li className="border-b pb-4">
-			<p className="font-medium text-gray-800">{comment.author}</p>
-			<p className="text-gray-600 mt-1">{comment.text}</p>
+		<li className="flex mt-6">
+			<p className="text-black text-sm/5">
+				{comment.author}: {comment.text}
+			</p>
 		</li>
 	);
 });

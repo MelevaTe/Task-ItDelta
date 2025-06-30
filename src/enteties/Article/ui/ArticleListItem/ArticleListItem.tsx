@@ -23,25 +23,18 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 	}
 
 	return (
-		<div className="mb-6">
-			<div
-				onClick={onShowModal}
-				className="cursor-pointer group"
-			>
-				<div className="relative w-full h-[216px] max-w-[431px] overflow-hidden rounded-lg shadow-md">
-					<img
-						src={article.image}
-						alt={"Картинка"}
-						className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-					/>
-				</div>
-
-				<div className="mt-3">
-					<p className="text-gray-500 text-sm mt-1">
-						ID: {article.id}
-					</p>
-				</div>
+		<div
+			onClick={onShowModal}
+			className="flex flex-col h-full "
+		>
+			<div className="relative flex-1 overflow-hidden rounded-lg cursor-pointer h-54 mb-2">
+				<img
+					src={article.image}
+					alt={"Картинка"}
+					className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+				/>
 			</div>
+			<p className="text-gray-900 text-sm/5">ID: {article.id}</p>
 
 			{isArticleModal && (
 				<ArticleViewerModal
