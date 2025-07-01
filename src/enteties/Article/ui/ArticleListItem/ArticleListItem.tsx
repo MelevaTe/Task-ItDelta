@@ -27,7 +27,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 			onClick={onShowModal}
 			className="flex flex-col h-full "
 		>
-			<div className="relative flex-1 overflow-hidden rounded-lg cursor-pointer h-54 mb-2">
+			<div className="relative flex-1 overflow-hidden rounded-lg cursor-pointer max-w-110 max-h-54 mb-2">
 				<img
 					src={article.image}
 					alt={"Картинка"}
